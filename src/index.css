@@ -8,7 +8,7 @@
 
 .parent {
   display: grid;
-  grid-template-rows: 50px 200px 100px 220px 180px 130px 100px 90px 170px 280px 500px 100px 40px;
+  grid-template-rows: 50px 200px 100px 220px 180px 130px 100px 90px 200px 280px 500px 100px 40px;
   grid-template-columns: auto 330px auto;
   width: 100vw;
 }
@@ -640,3 +640,101 @@
     transform: rotate(5deg);
   }
 }
+
+/* Tablet view: wider center column */
+@media screen and (min-width: 600px) {
+  .parent {
+    grid-template-columns: 1fr 500px 1fr;
+  }
+}
+
+/* Desktop view: expand layout and tighten spacing */
+@media screen and (min-width: 1024px) {
+  .parent {
+    grid-template-columns: 1fr 700px 1fr;
+  }
+
+  .firstWrapper .name {
+    font-size: 64px;
+  }
+
+  .firstWrapper .racingBig {
+    font-size: 28px;
+  }
+
+  .techWrapper {
+    gap: 50px;
+    padding-left: 70px;
+  }
+
+  .secondWrapper {
+    align-content: center;
+    gap: 20px;
+  }
+
+  .thirdWrapper {
+    gap: 40px;
+    padding-right: 70px;
+  }
+
+  .stackLogo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brandLogos {
+    width: 60px;
+    height: 60px;
+  }
+
+  .leafLogo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .connectLogo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .inputName,
+  .inputEmail,
+  .inputMessage {
+    width: 400px;
+  }
+
+  .email, .send {
+    width: 200px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .brands {
+    font-size: 24px;
+  }
+
+  .fifthWrapper {
+    justify-self: center;
+  }
+
+  .developer {
+    font-size: 32px;
+  }
+
+  .designer {
+    font-size: 32px;
+  }
+
+  .stackLogoWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content {
+    font-size: 18px;
+  }
+}
+
