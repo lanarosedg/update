@@ -244,6 +244,12 @@
   justify-content: center;
 }
 
+.techWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
 .title {
   font-family: 'Russo One';
   color: #00BFFF;
@@ -261,6 +267,15 @@
 .content {
   font-family: 'Orbitron';
   font-size: 14px;
+}
+.stackLogoWrapper {
+  gap: 10px;
+  align-self: center;
+}
+
+.stackLogo {
+  width: 40px;
+  height: 40px;
 }
 
 .third {
@@ -304,6 +319,10 @@
 .linkLogo {
   width: 30px;
   height: 30px;
+}
+
+.linkLogo:hover {
+  cursor: pointer;
 }
 
 .fourth {
@@ -568,4 +587,56 @@
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
+}
+
+/* React Logo - Continuous Rotation */
+.reactLogo {
+  animation: rotateReact 4s linear infinite;
+}
+@keyframes rotateReact {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Node Logo - Horizontal Sway */
+.nodeLogo {
+  animation: swayX 2s ease-in-out infinite;
+}
+@keyframes swayX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Java Logo - Vertical Bobbing */
+.javaLogo {
+  animation: bobY 3s ease-in-out infinite;
+}
+@keyframes bobY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* C# Logo - Gentle Rotation */
+.csharpLogo {
+  animation: tilt 3s ease-in-out infinite;
+}
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
 }

@@ -11,6 +11,11 @@ import linkedin from './assets/linkedin.png';
 import whatsapp from './assets/whatsapp.png';
 import github from './assets/github.png';
 
+import react from './assets/react.png';
+import node from './assets/node-js.png';
+import java from './assets/java.png';
+import csharp from './assets/c-sharp.png';
+
 function App() {
   useEffect(() => {
     const sections = document.querySelectorAll('.sectionFadeIn');
@@ -35,14 +40,24 @@ function App() {
       </div>
 
       <div className="second sectionFadeIn">
-        <div className="secondWrapper">
-          <p className="title">TECH STACK</p>
-          <div className="contentWrapper">
-            <p className="content">REACT.JS</p>
-            <p className="content">NODE.JS</p>
-            <p className="content">SPRING BOOT</p>
-            <p className="content">C#</p>
+        <div className="techWrapper">
+          <div className="secondWrapper">
+            <p className="title">TECH STACK</p>
+            <div className="contentWrapper">
+              <p className="content">REACT.JS</p>
+              <p className="content">NODE.JS</p>
+              <p className="content">SPRING BOOT</p>
+              <p className="content">C#</p>
+            </div>
           </div>
+          <div className="stackLogoWrapper">
+            <img src={react} alt="React" className="stackLogo reactLogo" /> &nbsp; &nbsp;
+            <img src={node} alt="Node.js" className="stackLogo nodeLogo" /> &nbsp; &nbsp;
+            <br /> <br />
+            <img src={java} alt="Java" className="stackLogo javaLogo" /> &nbsp; &nbsp;
+            <img src={csharp} alt="C#" className="stackLogo csharpLogo" />
+          </div>
+
         </div>
       </div>
 
