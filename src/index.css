@@ -1,0 +1,505 @@
+* {
+  background-color: #0D0D0D;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron';
+  color: #D9D9D9;
+}
+
+.parent {
+  display: grid;
+  grid-template-rows: 50px 200px 100px 220px 180px 130px 100px 90px 170px 280px 500px 100px 40px;
+  grid-template-columns: auto 330px auto;
+  width: 100vw;
+}
+
+.grid1 {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 2;
+  border: 1px solid #9B30FF;
+  border-left: none;
+  border-top: none;
+}
+
+.grid2 {
+  display: grid;
+  grid-area: 1 / 2 / 2 / 3;
+  border: 1px solid #9B30FF;
+  border-top: none;
+  border-left: none;
+}
+
+.grid3 {
+  display: grid;
+  grid-area: 1 / 3 / 2 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid4 {
+  display: grid;
+  grid-area: 2 / 1 / 3 / 2;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid5 {
+  display: grid;
+  grid-area: 3 / 1 / 4 / 2;
+  border: 1px solid #9B30FF;
+  border-left: none;
+}
+
+.grid6 {
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  border-top: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid7 {
+  display: grid;
+  grid-area: 4 / 3 / 5 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid8 {
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  border-top: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid10 {
+  display: grid;
+  grid-area: 4 / 1 / 5 / 2;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid11 {
+  display: grid;
+  grid-area: 5 / 1 / 6 / 2;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid12 {
+  display: grid;
+  grid-area: 5 / 3 / 6 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid13 {
+  display: grid;
+  grid-area: 6 / 1 / 7 / 2;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid14 {
+  display: grid;
+  grid-area: 6 / 3 / 7 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid15 {
+  display: grid;
+  grid-area: 7 / 1 / 8 / 2;
+  border-bottom: 1px solid #9B30FF;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid16 {
+  display: grid;
+  grid-area: 7 / 2 / 8 / 3;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid17 {
+  display: grid;
+  grid-area: 7 / 3 / 8 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid18 {
+  display: grid;
+  grid-area: 8 / 1 / 9 / 2;
+  border-bottom: 1px solid #9B30FF;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid19 {
+  display: grid;
+  grid-area: 8 / 3 / 9 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid20 {
+  display: grid;
+  grid-area: 9 / 1 / 10 / 2;
+  border-bottom: 1px solid #9B30FF;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid21 {
+  display: grid;
+  grid-area: 9 / 3 / 10 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid22 {
+  display: grid;
+  grid-area: 10 / 1 / 11 / 2;
+  border-bottom: 1px solid #9B30FF;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid23 {
+  display: grid;
+  grid-area: 10 / 3 / 11 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid24 {
+  display: grid;
+  grid-area: 11 / 1 / 12 / 2;
+  border-bottom: 1px solid #9B30FF;
+  border-right: 1px solid #9B30FF;
+}
+
+.grid25 {
+  display: grid;
+  grid-area: 11 / 3 / 12 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid26 {
+  display: grid;
+  grid-area: 12 / 1 / 13 / 2;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid27 {
+  display: grid;
+  grid-area: 12 / 2 / 13 / 3;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.grid28 {
+  display: grid;
+  grid-area: 12 / 3 / 13 / 4;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.first {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  border-right: 1px solid #9B30FF;
+}
+
+.firstWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.orbitronGreen {
+  color: #39FF14;
+  font-size: 14px;
+}
+
+.racingSmall {
+  font-family: 'Racing Sans One';
+  font-size: 14px;
+}
+
+.name {
+  font-family: 'Russo One';
+  font-size: 48px;
+  color: #FF3131;
+}
+
+.racingBig {
+  font-family: 'Racing Sans One';
+  font-size: 24px;
+}
+
+.second {
+  display: grid;
+  grid-area: 4 / 2 / 5 / 3;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.secondWrapper {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-content: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Russo One';
+  color: #00BFFF;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.content {
+  font-family: 'Orbitron';
+  font-size: 14px;
+}
+
+.third {
+  display: grid;
+  grid-area: 5 / 2 / 6 / 3;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.thirdWrapper {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.brands {
+  font-family: 'Russo One';
+  color: #00BFFF;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-self: right;
+  text-align: right;
+  align-self: center;
+}
+
+.brandLogoWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
+}
+
+.brandLogos {
+  width: 50px;
+  height: 50px;
+}
+
+.linkLogo {
+  width: 30px;
+  height: 30px;
+}
+
+.fourth {
+  display: grid;
+  grid-area: 6 / 2 / 7 / 3;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.fourthWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cmsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cmsStackWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fifth {
+  display: grid;
+  grid-area: 8 / 2 / 9 / 3;
+  align-content: center;
+  border-right: 1px solid #9B30FF;
+  border-bottom: 1px solid #9B30FF;
+}
+
+.fifthWrapper {
+  padding-left: 30px;
+}
+
+.developer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #39FF14;
+}
+
+.designer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00BFFF;
+}
+
+.sixth {
+  display: grid;
+  grid-area: 9 / 2 / 10 / 3;
+  border: 1px solid #9B30FF;
+  border-top: none;
+  border-left: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.sixthWrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  gap: 20px;
+}
+
+.lifeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leafLogo {
+  width: 50px;
+  height: 50px;
+}
+
+.seventh {
+  display: grid;
+  grid-area: 10 / 2 / 11 / 3;
+  border: 1px solid #9B30FF;
+  border-top: none;
+  border-left: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.seventhWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 50px;
+}
+
+.connectLogoWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.connectLogo {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.email {
+  width: 180px;
+  height: 40px;
+  border-style: none;
+  background-color: #1E1E1E;
+  border-radius: 5px;
+}
+
+.email:hover {
+  width: 182px;
+  color: #39FF14;
+  cursor: pointer;
+  background-color: #2f2f2f;
+}
+
+.message {
+  display: grid;
+  grid-area: 11 / 2 / 12 / 3;
+  border: 1px solid #9B30FF;
+  border-top: none;
+  border-left: none;
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputName {
+  width: 270px;
+  height: 40px;
+  border-color: #9B30FF;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.inputEmail {
+  width: 270px;
+  height: 40px;
+  border-color: #9B30FF;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.inputMessage {
+  width: 270px;
+  height: 160px;
+  border-color: #9B30FF;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.send {
+  width: 180px;
+  height: 40px;
+  border-style: none;
+  background-color: #1E1E1E;
+  border-radius: 5px;
+}
+
+.send:hover {
+  width: 182px;
+  color: #9B30FF;
+  cursor: pointer;
+  background-color: #2f2f2f;
+}
+
+.copyright {
+  display: grid;
+  grid-area: 13 / 2 / 14 / 3;
+  font-size: 10px;
+  justify-self: center;
+  align-self: center;
+}
