@@ -8,7 +8,7 @@
 
 .parent {
   display: grid;
-  grid-template-rows: 50px 200px 100px 220px 180px 130px 100px 90px 200px 280px 500px 100px 40px;
+  grid-template-rows: 50px 200px 100px 220px 180px 130px 100px 90px 200px 300px 500px 100px 40px;
   grid-template-columns: auto 330px auto;
   width: 100vw;
 }

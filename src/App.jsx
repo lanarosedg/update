@@ -16,7 +16,39 @@ import node from './assets/node-js.png';
 import java from './assets/java.png';
 import csharp from './assets/c-sharp.png';
 
+import { useState } from 'react';
+import { collection, addDoc } from "firebase/firestore";
+import { db } from './firebase';
+
 function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async () => {
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "messages"), {
+        name,
+        email,
+        message,
+        timestamp: new Date()
+      });
+
+      alert("Message sent!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   useEffect(() => {
     const sections = document.querySelectorAll('.sectionFadeIn');
     sections.forEach((section, index) => {
@@ -65,10 +97,22 @@ function App() {
         <div className="thirdWrapper">
           <p className="brands">BRANDS <br />WORKED <br /> WITH</p>
           <div className="brandLogoWrapper">
-            {[toyota, subaru, lexus].map((logo, index) => (
-              <img key={index} src={logo} alt="brand" className="brandLogos" />
+            {[
+              { logo: toyota, url: "https://www.partslane.com.sg/sgretail/" },
+              { logo: subaru, url: "https://www.partslane.com.au/home/" },
+              { logo: lexus, url: "https://www.partslane.com.hk/home/" }
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={item.logo} alt="brand" className="brandLogos" />
+              </a>
             ))}
           </div>
+
         </div>
       </div>
 
@@ -76,7 +120,13 @@ function App() {
         <div className="fourthWrapper">
           <div className="cmsWrapper">
             <p className="title">CMS PROJECT</p>
-            <img src={link} alt="link logo" className="linkLogo" />
+              <a
+                href="https://www.bcnmtpoint.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={link} alt="link logo" className="linkLogo" />
+              </a>
           </div>
           <div className="cmsStackWrapper">
             <p className="content">WORDPRESS</p>
@@ -106,21 +156,53 @@ function App() {
         <div className="seventhWrapper">
           <p className="title">LET'S CONNECT</p>
           <div className="connectLogoWrapper">
-            {[whatsapp, github, linkedin].map((icon, index) => (
-              <img key={index} src={icon} alt="connect" className="connectLogo" />
+            {[
+              { icon: whatsapp, url: "https://api.whatsapp.com/send/?phone=%2B639324640186&text&type=phone_number&app_absent=0" },
+              { icon: github, url: "https://github.com/lanarosedg" },
+              { icon: linkedin, url: "https://www.linkedin.com/in/lanarosedg/" }
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={item.icon} alt="connect" className="connectLogo" />
+              </a>
             ))}
           </div>
-          <button className="email">SEND AN EMAIL</button>
+
+          <a href="mailto:lanarosedeguzman@gmail.com">
+            <button className="email">SEND AN EMAIL</button>
+          </a>
         </div>
       </div>
 
       <div className="message sectionFadeIn">
         <div className="messageWrapper">
           <p className="title">SEND A MESSAGE</p>
-          <input type="text" placeholder="NAME" className="inputName" />
-          <input type="email" placeholder="EMAIL" className="inputEmail" />
-          <textarea placeholder="MESSAGE" className="inputMessage" />
-          <button className="send">SEND</button>
+          <input
+            type="text"
+            className="inputName"
+            placeholder="NAME"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            className="inputEmail"
+            placeholder="EMAIL"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <textarea
+            className="inputMessage"
+            placeholder="MESSAGE"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <button className="send" onClick={handleSubmit}>SEND</button>
+
         </div>
       </div>
 
